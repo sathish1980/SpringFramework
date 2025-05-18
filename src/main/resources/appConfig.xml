@@ -3,9 +3,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-<bean id="studentInfo" class="Spring.SpringFramework.Students">
-<property name="name" value="FITA"></property>
+<bean id="studentInfo" class="Spring.SpringFramework.Students" scope="singelton" autowire="byType">
+<property name="name" value="Sathish"></property>
+<property name="courseName" value="Java"></property>
   </bean>
   <bean id="teacherinfo" class="Spring.SpringFramework.Teacher">
+   <constructor-arg value="50" index ="1"></constructor-arg>
+  <constructor-arg value="Java Tutor" index ="0"></constructor-arg>
+
   </bean>
 </beans>
